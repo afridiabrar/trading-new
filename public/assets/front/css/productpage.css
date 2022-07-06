@@ -1,0 +1,349 @@
+.img-tls {
+    display: none;
+}
+figure {
+    padding: 0;
+    margin-bottom: 0;
+}
+/* BreadCrumbs Css Start Here */
+.productpage .breadcrumbs nav {
+    padding: 0;
+}
+.productpage .breadcrumbs nav ol.breadcrumb {
+    margin-bottom: 0;
+    background: transparent;
+}
+.productpage .breadcrumbs nav ol.breadcrumb li {
+    color: #000;
+    font-weight: 700;
+}
+.productpage .breadcrumbs nav ol.breadcrumb li a {
+    color: #000;
+}
+/* Braedcrumbs Css End Here */
+
+/* Signgle Products Css Start here */
+.productpage .img-box figure img {
+    width: 100%;
+    transform: scale(.9);
+    transition: all 0.3s ease-in-out;
+}
+.productpage .img-box figure img:hover {
+    transform: scale(1);
+}
+.productpage .productsimages ul.images {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.productpage .productsimages ul.images li figure img {
+    width: 100%;
+    cursor: pointer;
+}
+.productpage .category {
+    padding-top: 20px;
+}
+.productpage .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productpage .info  h3 {
+    margin-bottom: 0;
+}
+.productpage .info .price h3 {
+    color: #262262;
+}
+.productpage .reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productpage .reviews .moq span {
+    font-size: 12px;
+}
+.productpage .reviews .stars {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.productpage .reviews .stars .clentreviews {
+    padding-left: 10px;
+}
+.productpage .reviews .stars .star {
+    color: #8DC63F;
+    margin: 0 1px;
+}
+.productpage .reviews .clentreviews h5 {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.productpage .description {
+    padding-top: 30px;
+}
+.productpage .note p {
+    color: #8DC63F;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.productpage .description h4 {
+    color: #464646;
+}
+.productpage .offerHere {
+    background: url(../img/tableback.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 15px;
+}
+.productpage .offerHere .TopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productpage .offerHere .TopBar .value h5 {
+    font-size: 15px;
+}
+.productpage .offerHere .priceTime {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productpage .MOQ h4 {
+    color: #464646;
+}
+.productpage .MOQ .moqtable {
+    border: 1px solid #707070;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.productpage .MOQ .moqtable table {
+    width: 100%;
+    text-align: center;
+}
+.productpage .MOQ .moqtable table tr {
+    height: 40px;
+}
+.productpage .MOQ .moqtable table tr td.one {
+    color: #8dc63f;
+    font-weight: 600;
+    border-right: 1px solid #7070704d;
+}
+.productpage .MOQ .moqtable table td {
+    border-right: 1px solid #70707057;
+}
+.productpage .MOQ .moqtable table td.six {
+    border: 0;
+}
+.productpage .MOQ .moqtable table tr.Rowone td {
+    padding: 0 12px;
+    border-bottom: 1px solid #00000036;
+}
+.productpage .variations {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.productpage .variations label {
+    width: 40px;
+    margin-bottom: 0;
+}
+.productpage .variations input {
+    border-radius: 0;
+    background: #F2F2F2;
+    padding: 7px 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 14px;
+}
+.productpage .variations .spacer {
+    padding: 0 30px;
+}
+.productpage .variations .quantity {
+    display: flex;
+    align-items: center;
+}
+.productpage .variations .quantity .colors {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.productpage .variations .quantity .colors .arrows {
+    padding-left: 5px;
+}
+.productpage .variations .quantity .colors .arrows i {
+    background: #F2F2F2;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0px 4px;
+    cursor: pointer;
+}
+.productpage .buttons {
+    padding: 20px 0 40px;
+}
+.productpage .buttons a {
+    border: 0;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+}
+.productpage .buttons a.cart {
+    background: #8DC63F;
+    padding: 15px 50px;
+    border-radius: 50px;
+}
+.productpage .buttons a.cart:hover {
+    background: #262262;
+}
+.productpage .buttons a.wishlist {
+    background: #262262;
+    padding: 15px 30px;
+    margin-left: -4.5px;
+    border-radius: 0px 50px 50px 0px;
+}
+.productpage .buttons a i {
+    font-size: 13px;
+    padding-left: 10px;
+}
+.productpage .share-btn {
+    display: flex;
+    align-items: center;
+}
+.productpage .share-btn label {
+    width: 70px;
+    margin-bottom: 0;
+}
+.productpage .share-btn ul.social-icons {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.productpage .share-btn ul.social-icons li {
+    display: inline-block;
+    margin: 0 4px;
+}
+.productpage .share-btn ul.social-icons li a i {
+    color: #000;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+}
+.productpage .share-btn ul.social-icons li a i:hover {
+    color: #8dc63f;
+}
+.ClientsReviewsSec .nav-tabs {
+    margin-bottom: 30px;
+}
+.ClientsReviewsSec .nav-tabs li.nav-item a {
+    background: #fff;
+    padding: 9px 20px;
+    border: 0px solid #000;
+    width: 180px;
+    text-align: center;
+    margin-right: 2px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    border-radius: 10px 10px 0 0px;
+    margin-bottom: 1px;
+}
+.ClientsReviewsSec .nav-tabs li.nav-item a.active {
+    background: #262262;
+    color: #fff;
+}
+.ClientsReviewsSec .nav-tabs li.nav-item a.active:hover {
+    background: #8dc63f;
+}
+.ClientsReviewsSec .head {
+    padding-bottom: 20px;
+}
+.ClientsReviewsSec .brieflyReview {
+    display: flex;
+    align-items: flex-start;
+}
+.ClientsReviewsSec .brieflyReview .img-box {
+    min-width: 120px;
+}
+.ClientsReviewsSec .brieflyReview .contentDv .info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.ClientsReviewsSec .brieflyReview .contentDv .info .spacer {
+    padding: 0 10px;
+}
+.ClientsReviewsSec .brieflyReview .contentDv .info h6 {
+    margin-bottom: 0;
+}
+.ClientsReviewsSec .brieflyReview .descrip {
+    padding-right: 20%;
+}
+.ClientsReviewsSec .brieflyReview .descrip p {
+    font-weight: 400;
+}
+.ClientsReviewsSec .brieflyReview .rating {
+    display: flex;
+}
+.ClientsReviewsSec .brieflyReview .rating .stars {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+.ClientsReviewsSec .brieflyReview .rating .stars .star-count {
+    padding-left: 7px;
+}
+.ClientsReviewsSec .brieflyReview .rating .stars i {
+    margin: 0 3px;
+    color: #8DC63F;
+}
+.ClientsReviewsSec .brieflyReview .rating .rply-btn a {
+    font-size: 13px;
+    color: #262262;
+    font-weight: 600;
+}
+.ClientsReviewsSec .brieflyReview .rating .rply-btn a:hover {
+    color: #8dc63f;
+}
+.ClientsReviewsSec .replyDv .brieflyReview .img-box {
+    min-width: 80px;
+}
+.ClientsReviewsSec .replyDv {
+    background: #F5F5F5;
+    padding: 10px 30px  0px;
+    margin-left: 120px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.ClientsReviewsSec .replyDv .brieflyReview {
+    padding: 15px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+.ClientsReviewsSec .replyDv .brieflyReview:last-child {
+    border: 0;
+}
+.ClientsReviewsSec .replyDv .brieflyReview .descrip p {
+    margin-bottom: 0;
+}
+.ClientsReviewsSec .border-topp {
+    border-top: 1px solid #E3E3E3;
+}
+/* Similar Products Css Start Here */
+.similar_products .topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.similar_products .topBar .heading h2 {
+    color: #8dc63e;
+}
+.similar_products .topBar .view-btn a {
+    color: #272262;
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: underline;
+}
+/* Similar Products Css End Here */
+
+/* Signgle Products Css End here */

@@ -1,0 +1,129 @@
+body {
+    background-color: #f9f9f9;
+}
+figure {
+    padding: 0;
+}
+.img-tls {
+    display: none;
+}
+/* Contact us css Start Here */
+.Conversationform {
+    padding: 100px 0 70px 0;
+}
+.Conversationform .heading {
+    text-align: center;
+    padding: 0px 10rem 2rem;
+}
+.Conversationform .heading h1 {
+    font-size: 60px;
+    color: #8DC63E;
+}
+.Conversationform form {
+    background: #fff;
+    padding: 40px 70px;
+    margin: 0 100px;
+}
+.Conversationform form .form-group label {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #5A7184;
+}
+.Conversationform form .form-group .form-control {
+    border: 1px solid #C3CAD9;
+    background: transparent;
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #959ead;
+}
+.Conversationform form .form-group button {
+    border: 0;
+    background: #262262;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px 150px;
+    border-radius: 50px;
+    display: flex;
+    margin: 0px auto;
+    transition: all 0.3s ease-in-out;
+}
+.Conversationform form .form-group button:hover{
+    background: #8DC63E;
+}
+/* Faqs Start Here */
+.Faqs  {
+    background-color: #fff;
+}
+.Faqs .head {
+    text-align: center;
+}
+.Faqs .head h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+.Faqs .head  h3 {
+    margin-bottom: 0;
+    color: #8dc63e;
+}
+.Faqs .card .card-header {
+    padding: 0;
+}
+.Faqs .card .card-header button {
+    padding: 15px 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 16px;
+    color:  #000;
+    font-weight: 600;
+}
+.Faqs .card .card-header button:hover {
+    color: #262262 !important;
+}
+.Faqs .card .card-header {
+    background: transparent;
+    border: 0;
+}
+.Faqs .card {
+    border: 0;
+    border-bottom: 1px solid #0000002e;
+    border-radius: 0;
+}
+.Faqs .card  .card-body {
+    padding: 0 10px 15px 10px;
+}
+.Faqs .card .card-header button i {
+    color: #262262;
+}
+.Faqs .card .card-header button[aria-expanded="true"] i:before {
+    content: "\f056";
+}
+.infoSec .info-box .contentDv h4 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #183B56;
+}
+.infoSec .info-box .contentDv p {
+    color: #5A7184;
+    font-weight: 400;
+    padding: 0 20px;
+}
+.infoSec .info-box .contentDv a {
+    color: #56B14E;
+    font-weight: 600;
+    font-size: 18px;
+    border: 2px solid #f9f9f9;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: 0.6s;
+}
+.infoSec .info-box .contentDv a:hover {
+    border-color: #56B14E;
+}
+/* Faqs Start Here */
+
+/* Contact us Css End Here */

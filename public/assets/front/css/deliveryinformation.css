@@ -1,0 +1,59 @@
+.img-tls {
+    display: none;
+}
+.information {
+    padding-bottom: 0;
+}
+.information .track-your-order {
+    background: #fff;
+    box-shadow: 0px 0px 6px #ccc;
+    border-radius: 20px;
+    padding: 70px 60px;
+    text-align: center;
+}
+.information .track-your-order ul.tracking {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+.information .track-your-order .inputField input {
+    color: #636060;
+    font-weight: 100;
+    font-size: 15px;
+    padding: 10px 50px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid #00000021;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+    outline: none;
+    box-sizing: border-box;
+    position: relative;
+}
+.information .track-your-order .inputField input:focus {
+    border: 2px solid #8dc63e !important;
+}
+.information .track-your-order ul.tracking li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.information .track-your-order ul.tracking li i {
+    margin-right: 5px;
+}
+.information .track-your-order ul.tracking li i.fa.fa-check {
+    background: #8DC63F;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    line-height: 25px;
+}
+.information .track-your-order ul.tracking li i.fa.fa-circle {
+    color: #CECECE;
+    background: #CECECE;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    line-height: 25px;
+}

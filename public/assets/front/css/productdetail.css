@@ -1,0 +1,283 @@
+.img-tls {
+    display: none;
+}
+figure {
+    padding: 0;
+    margin-bottom: 0;
+}
+/* BreadCrumbs Css Start Here */
+.productdetail .breadcrumbs nav {
+    padding: 0;
+}
+.productdetail .breadcrumbs nav ol.breadcrumb {
+    margin-bottom: 0;
+    background: transparent;
+}
+.productdetail .breadcrumbs nav ol.breadcrumb li {
+    color: #000;
+    font-weight: 700;
+}
+.productdetail .breadcrumbs nav ol.breadcrumb li a {
+    color: #000;
+}
+/* Braedcrumbs Css End Here */
+
+/* Signgle Products Css Start here */
+.productdetail .img-box figure img {
+    width: 100%;
+    transform: scale(.9);
+    transition: all 0.3s ease-in-out;
+}
+.productdetail .img-box figure img:hover {
+    transform: scale(1);
+}
+.productdetail .productsimages ul.images {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.productdetail .productsimages ul.images li figure img {
+    width: 100%;
+    cursor: pointer;
+}
+.productdetail .category {
+    padding-top: 20px;
+}
+.productdetail .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productdetail .info  h3 {
+    margin-bottom: 0;
+}
+.productdetail .info .price h3 {
+    color: #262262;
+}
+.productdetail .reviews {
+    display: flex;
+    align-items: center;
+}
+.productdetail .reviews .stars {
+    width: 100px;
+}
+.productdetail .reviews .stars .star {
+    color: #8DC63F;
+    margin: 0 1px;
+}
+.productdetail .reviews .clentreviews h5 {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.productdetail .description {
+    padding-top: 30px;
+}
+.productdetail .description h4 {
+    color: #464646;
+}
+.productdetail .variations {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.productdetail .variations label {
+    width: 40px;
+    margin-bottom: 0;
+}
+.productdetail .variations input {
+    border-radius: 0;
+    background: #F2F2F2;
+    padding: 7px 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 14px;
+}
+.productdetail .variations .spacer {
+    padding: 0 30px;
+}
+.productdetail .variations .quantity {
+    display: flex;
+    align-items: center;
+}
+.productdetail .variations .quantity .colors {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.productdetail .variations .quantity .colors .arrows {
+    padding-left: 5px;
+}
+.productdetail .variations .quantity .colors .arrows i {
+    background: #F2F2F2;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0px 4px;
+    cursor: pointer;
+}
+.productdetail .buttons {
+    padding: 60px 0;
+}
+.productdetail .buttons a {
+    border: 0;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+}
+.productdetail .buttons a.cart {
+    background: #8DC63F;
+    padding: 15px 50px;
+    border-radius: 50px 0px 0px 50px;
+}
+.productdetail .buttons a.cart:hover {
+    background: #84b146;
+}
+.productdetail .buttons a.wishlist {
+    background: #262262;
+    padding: 15px 30px;
+    margin-left: -4.5px;
+    border-radius: 0px 50px 50px 0px;
+}
+.productdetail .buttons a i {
+    font-size: 13px;
+    padding-left: 10px;
+}
+.productdetail .share-btn {
+    display: flex;
+    align-items: center;
+}
+.productdetail .share-btn label {
+    width: 70px;
+    margin-bottom: 0;
+}
+.productdetail .share-btn ul.social-icons {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.productdetail .share-btn ul.social-icons li {
+    display: inline-block;
+    margin: 0 4px;
+}
+.productdetail .share-btn ul.social-icons li a i {
+    color: #000;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+}
+.productdetail .share-btn ul.social-icons li a i:hover {
+    color: #8DC63F;
+}
+.ClientsReviewsSec .nav-tabs {
+    margin-bottom: 30px;
+}
+.ClientsReviewsSec .nav-tabs li.nav-item a {
+    background: #fff;
+    padding: 9px 20px;
+    border: 0px solid #000;
+    width: 180px;
+    text-align: center;
+    margin-right: 2px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    border-radius: 10px 10px 0 0px;
+    margin-bottom: 1px;
+}
+.ClientsReviewsSec .nav-tabs li.nav-item a.active {
+    background: #262262;
+    color: #fff;
+}
+.ClientsReviewsSec .nav-tabs li.nav-item a.active:hover {
+    background: #8DC63F;
+}
+.ClientsReviewsSec .head {
+    padding-bottom: 20px;
+}
+.ClientsReviewsSec .brieflyReview {
+    display: flex;
+    align-items: flex-start;
+}
+.ClientsReviewsSec .brieflyReview .img-box {
+    min-width: 120px;
+}
+.ClientsReviewsSec .brieflyReview .contentDv .info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.ClientsReviewsSec .brieflyReview .contentDv .info .spacer {
+    padding: 0 10px;
+}
+.ClientsReviewsSec .brieflyReview .contentDv .info h6 {
+    margin-bottom: 0;
+}
+.ClientsReviewsSec .brieflyReview .descrip {
+    padding-right: 20%;
+}
+.ClientsReviewsSec .brieflyReview .descrip p {
+    font-weight: 400;
+}
+.ClientsReviewsSec .brieflyReview .rating {
+    display: flex;
+}
+.ClientsReviewsSec .brieflyReview .rating .stars {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+.ClientsReviewsSec .brieflyReview .rating .stars .star-count {
+    padding-left: 7px;
+}
+.ClientsReviewsSec .brieflyReview .rating .stars i {
+    margin: 0 3px;
+    color: #8DC63F;
+}
+.ClientsReviewsSec .brieflyReview .rating .rply-btn a {
+    font-size: 13px;
+    color: #262262;
+    font-weight: 600;
+}
+.ClientsReviewsSec .replyDv .brieflyReview .img-box {
+    min-width: 80px;
+}
+.ClientsReviewsSec .replyDv {
+    background: #F5F5F5;
+    padding: 10px 30px  0px;
+    margin-left: 120px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.ClientsReviewsSec .replyDv .brieflyReview {
+    padding: 15px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+.ClientsReviewsSec .replyDv .brieflyReview:last-child {
+    border: 0;
+}
+.ClientsReviewsSec .replyDv .brieflyReview .descrip p {
+    margin-bottom: 0;
+}
+.ClientsReviewsSec .border-topp {
+    border-top: 1px solid #E3E3E3;
+}
+/* Similar Products Css Start Here */
+.similar_products .topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.similar_products .topBar .heading h2 {
+    color: #8dc63e;
+}
+.similar_products .topBar .view-btn a {
+    color: #272262;
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: underline;
+}
+/* Similar Products Css End Here */
+
+/* Signgle Products Css End here */

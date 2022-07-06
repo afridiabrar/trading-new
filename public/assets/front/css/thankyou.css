@@ -1,0 +1,21 @@
+body {
+    background-color: #f9f9f9;
+}
+.img-tls {
+    display: none;
+}
+.thankyou .happyShopping {
+    background: #fff;
+    padding: 60px 30px;
+    width: 40%;
+    margin: 0px auto;
+    text-align: center;
+}
+.thankyou .happyShopping .button-group a.btn {
+    background: #8DC63F;
+    font-size: 18px;
+    padding: 8px 30px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: none;
+}

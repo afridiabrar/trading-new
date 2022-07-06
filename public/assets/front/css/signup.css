@@ -1,0 +1,74 @@
+/* Signin Css Start Here */
+figure {
+    padding: 0;
+}
+.signup {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+section.signup form input:focus {
+    border: 2px solid #8dc63f !important;
+}
+.signup .signupBox .head {
+    padding-bottom: 5px;
+}
+.signup .signupBox .head h4 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.signup .signupBox .head h4 strong {
+    font-weight: 700;
+}
+.signup .signupBox .actionBtn {
+    padding-bottom: 5px;
+}
+.signup .signupBox .actionBtn p a {
+    color: #8dc63f;
+    padding-left: 5px;
+}
+.signup .signupBox .actionBtn p a:hover {
+    color: #262262;
+}
+.signup .signupBox form {
+    padding: 0 28%;
+}
+.signup .signupBox form .form-group .form-control {
+    border-radius: 50px;
+    padding: 0px 30px;
+    border: 1px solid #00000052;
+    background: transparent;
+}
+.signup .signupBox form button {
+    background: #262262;
+    border: 0;
+    color: #fff;
+    padding: 12px 0px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+.signup .signupBox form button:hover {
+    background: #8dc63f;
+    color: #000;
+}
+.signup .signupBox .actionBtn2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 30px;
+}
+.signup .signupBox .actionBtn2 p a {
+    color: #8dc63f;
+}
+.signup .signupBox .actionBtn2 p a:hover{
+    color: #262262;
+}
+/* Signin Css End Here */

@@ -1,0 +1,216 @@
+/* Hot Deal Css Start Here */
+.hotdeals {
+    padding-bottom: 0;
+}
+figure {
+    padding: 0;
+}
+.regular .slick-slide {
+    padding: 0 13px;
+}
+/* Filter Css Start Here */
+.filter-border {
+    border-bottom: 2px solid #70707042;
+}
+.filters .categories #accordion .card {
+    border: 0;
+    margin-bottom: 0;
+}
+.filters .categories #accordion .card .card-body {
+    padding: 0;
+}
+.hotdeals #accordion-inner .card .inner-text {
+    padding: 10px 0 0 50px !important;
+    margin-bottom: 0;
+}
+.filters .categories #accordion .card .card-header {
+    outline: none;
+    background: transparent;
+    border: 0;
+    padding: 0px 0;
+}
+.filters .categories #accordion .card .card-header button.btnn.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    outline: none;
+    text-decoration: none;
+    border-bottom: 1px solid #cccccc80;
+}
+.filters .categories #accordion .card .card-header button.btnn.btn-link h6 {
+    margin-bottom: 0;
+    color: #000;
+    font-family: 'Poppins';
+}
+.filters .categories #accordion .card .card-header button.btnn.btn-link p {
+    margin-bottom: 0;
+}
+.filters .categories #accordion .card .form-check label.form-check-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}  
+.filters .categories #accordion .card .form-check {
+    border-bottom: 1px solid #EBEBEB;
+    padding: 12px 0px 12px 20px;
+    border: 0;
+    display: flex;
+    align-items: center;
+}
+.filters .categories #accordion .card .form-check label.form-check-label .name span {
+    font-size: 13px;
+    font-family: 'Poppins';
+    color: #898989;
+    font-weight: 600;
+} 
+.form-check input:checked ~ label.form-check-label .name span {
+    color: #8ec63f !important;
+}
+.filters .categories #accordion .card .form-check label.form-check-label .products-count span {
+    font-family: 'Montserrat';
+    color: #B6B6B6;
+    font-size: 14px;
+}
+.filters .categories #accordion .card .card-header button.btn.btn-link .form-check {
+    padding: 0 20px;
+}
+.filters .categories #accordion .card .card-header button.btn.btn-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid #00000024;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+}
+.filters .categories #accordion .card button.btn {
+    padding: 12px 0 !important;
+}
+.filters .categories #accordion .card .card-header button.btn.btn-link i {
+    color: #000;
+}
+.hotdeals #accordion-inner .card #innerToggle h5 button.btn.btn-link {
+    padding-left: 30px !important;
+}
+.hotdeals #accordion-inner .card .card-body {
+    padding-left: 17px;
+    padding-top: 10px;
+}
+.hotdeals #accordion-inner .card .card-body .card-body a {
+    color: #898989;
+    font-weight: 500;
+}
+/* Price Filter Start Here */
+.hotdeals .price-filter .range-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.hotdeals .price-filter .range-head p {
+    font-size: 18px;
+}
+.hotdeals .price-filter .range-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hotdeals .price-filter .range-slide .spacer {
+    padding: 0 10px;
+}
+.hotdeals .price-filter .range-slide label {
+    font-weight: 500;
+}
+.hotdeals .price-filter .range-slide input {
+    border: 1px solid #707070;
+    border-radius: 0;
+    width: 100%;
+    background: transparent;
+    padding: 2px 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+/* Price Filter End Here */
+
+/* Brands Filter Css Start Here */
+.hotdeals .brand-filter .brands {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #EBEBEB;
+}
+.hotdeals .brand-filter .brands span {
+    font-weight: 600;
+    color: #898989;
+}
+.hotdeals .filters .ads-banner {
+    padding-top: 40px;
+}
+.hotdeals .filters .ads-banner figure img {
+    width: 100%;
+}
+/* Brands Filter Css End Here */
+
+/* Filter Css End Here */
+
+/* Products Css Start Here */
+.hotdeals .topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hotdeals .topBar .heading h2 {
+    color: #8DC63E;
+}
+.hotdeals .topBar .sort-btn button {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    color: #272262;
+    font-weight: 500;
+    text-decoration: underline;
+    outline: none;
+}
+/* Products Css End Here */
+
+/* Pagination */
+.hotdeals .pagination .pafination-Flex ul.items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+.hotdeals .pagination .pafination-Flex ul.items li.pagi {
+    margin: 0 4px;
+    border: 1px solid #B6B6B6;
+    width: 30px;
+    text-align: center;
+}
+.hotdeals .pagination .pafination-Flex ul.items li.active {
+    border-color: #1F2438;
+}
+.hotdeals .pagination .pafination-Flex ul.items li.pagi a {
+    color: #6E6E6E;
+}
+.hotdeals .pagination .pafination-Flex ul.items li.active a {
+    color: #1F2438;
+}
+.hotdeals .pagination .pafination-Flex ul.items .arrow {
+    background: #1F2438;
+    border-color: #1F2438 !important;
+}
+.hotdeals .pagination .pafination-Flex ul.items .arrow a {
+    color: #fff !important;
+    font-weight: 800;
+}
+/* Pagination */
+
+/* Hot Deal Css End Here */

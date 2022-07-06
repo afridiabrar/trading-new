@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AlterTableBannersAddColumns extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('banners', function (Blueprint $table) {
+            $table->string('title', 100)->after('id');
+            $table->string('sub_title', 100)->after('title');
+            $table->text('description')->after('sub_title');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('banners', function (Blueprint $table) {
+            $table->dropColumn(
+                [
+                    'title',
+                    'sub_title',
+                    'description'
+                ]
+            );
+        });
+    }
+}
