@@ -44,7 +44,7 @@ class CategoryController extends Controller
             // return $id;
 
             $products = CategoryManager::products($id);
-            return $products;
+//            return $products;
 
             return $this->respond($products, [], 200);
         } catch (\Exception $e) {
