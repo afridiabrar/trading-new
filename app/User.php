@@ -75,7 +75,7 @@ class User extends Authenticatable
         if ($this->image) {
             return url('storage/app/public/profile/'.$this->image);
         } else {
-            return url('/storage/app/public/profile/no-image-found.webp');
+            return url('/storage/profile/no-image-found.webp');
         }
     }
 
