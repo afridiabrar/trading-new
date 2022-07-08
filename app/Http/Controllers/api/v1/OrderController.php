@@ -104,12 +104,13 @@ class OrderController extends Controller
 
 //            return $this->respond([$email,$id],[],200,$request->user('api')->id);
 
-            Stripe::setApiKey(config('STRIPE_KEY','sk_test_51Htt4kBWz16oBSwkqWQ451eP4CkJsF9apWMNGkeS44fZyflKgBBzUZBoi7sn8SKPRn5QvFX2GglrfAV6wuwWTMOM00DBamCSGf'));
+            Stripe::setApiKey(config('STRIPE_KEY','sk_test_51LDNsIIXSseLhvkZx5H3UlJTjGnGEcIJD73SHtHHarwBlPER3uZAEAUdsstrUKfklI5hG7WbcKnDMuE4JcvXvjNS00wMzAEtmg'));
 
                        // sprintf("%.2f", $request['discount'])
                     //    floatval
                     // number_format( $request['cart'], 2, '.', '');
-            $amount = CartManager::cart_grand_total( $request['cart']) - ($request['discount'] ? $request['discount'] : 0 ) * 100;
+            $amount = CartManager::cart_grand_total( $request['cart']) - ($request['discount'] ? $request['discount'] : 0 );
+//            return $amount;
 
             $x = Charge::create ([
                 "amount" => (int) $amount,
