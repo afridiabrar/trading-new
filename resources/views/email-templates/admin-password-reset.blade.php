@@ -107,7 +107,7 @@
         Reset Your password.
     </div>
     <div class="card-body">
-        <a style="background: darkblue" class="btn btn-primary" href="{{$url}}">
+        <a style="background: darkblue; color: white; " class="btn btn-primary" href="{{$url}}">
           Click to Reset
         </a>
     </div>

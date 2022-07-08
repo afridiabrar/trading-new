@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -48,6 +49,7 @@ class AppServiceProvider extends ServiceProvider
                 'footer_logo' => Helpers::get_settings($web, 'company_footer_logo'),
                 'copyright_text' => Helpers::get_settings($web, 'company_copyright_text'),
             ]);
+
         } catch (\Exception $ex) {
 
         }
