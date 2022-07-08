@@ -25,6 +25,7 @@ class MailConfigServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        return;
         try {
             $data = BusinessSetting::where(['type' => 'mail_config'])->first();
             $emailServices = json_decode($data['value'], true);
