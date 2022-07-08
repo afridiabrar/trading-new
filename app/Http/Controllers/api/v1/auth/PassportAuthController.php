@@ -47,7 +47,8 @@ class PassportAuthController extends Controller
             ]);
             $p = $request->all();
             $p += ['mail_title' => 'New User Singup in Trading.com'];
-            $this->sendEmail($p);
+            Mail::to($user['email'])->send(new \App\Mail\MyDemoMail($p));
+//            $this->sendEmail($p);
 
             $token = $user->createToken('LaravelAuthApp')->accessToken;
 
@@ -69,7 +70,7 @@ class PassportAuthController extends Controller
 
 
         $user = auth()->user();
-        $user = 'developer197855@gmail.com';
+        $user = 'trader2@yopmail.com';
         try {
             Mail::to($user)->send(new MyDemoMail($p));
         } catch (Exception $ex) {
