@@ -18,55 +18,91 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    public function get_latest_products(Request $request)
-    {
-        try {
-
-            if ($request->category_id) {
-                if ($request->status === "high_to_low") {
-                    $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
-                    return $this->respond($products, [], 200);
-                }
-                if ($request->status === "low_to_high") {
-                    $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
-                    return $this->respond($products, [], 200);
-                }
-                if ($request->status === 'undefined') {
-                    //  return  var_dump($request->category_id);
-                    $users = Product::whereJsonContains('category_ids->id', (int)$request->category_id)->get();
-                    return $this->respond($users, [], 200);
-                    // $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
-                    // return $this->respond($products, [], 200);
-                }
-                // return $id;
-
-                $products = CategoryManager::products($request->category_id);
-            } elseif ($request->start) {
-                    $products = ProductManager::get_by_price_products(
-                        $request['start'],
-                        $request['end'],
-                        '',
-                        $request['limit'],
-                        $request['offset']);
-            } else {
-                if($request->status === "high_to_low"){
-                    $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
-                    return $this->respond($products,[],200);
-                }
-                if($request->status === "low_to_high"){
-                    $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
-                    return $this->respond($products,[],200);
-                }
-
-                $products = ProductManager::get_latest_products($request['limit'], $request['offset']);
+    public function get_latest_products(){
+        try{
+            $productQuery = Product::query();
+            if(request()->has('category_id') && request()->get('category_id')){
+                $productQuery->whereJsonContains('category_ids->id', (int) request()->category_id);
             }
+            if(request()->has('subcategory_id') AND request()->get('subcategory_id')){
+                $productQuery->whereJsonContains('category_ids->id', (int) request()->subcategory_id)
+                    ->whereJsonContains('category_ids->parent_id',0,'and',true);
+            }
+            if(request()->has('price_start') AND request()->get('price_start')){
+                $productQuery->where('unit_price','>=',request()->price_start);
+            }
+            if(request()->has('price_end') AND request()->get('price_end')){
+                $productQuery->where('unit_price','<=',request()->price_end);
+            }
+            if(request()->has('brand_id') AND request()->get('brand_id')){
+                $productQuery->where('brand_id',request()->get('brand_id'));
+            }
+            $products = $productQuery->paginate(request()->get('take') || 20);
             return $this->respond($products,[],200);
-
-        }catch (\Exception $e){
-
+        }
+        catch (\Exception $e){
+            report($e);
             return $this->respond([],[],500,$e->getMessage());
         }
     }
+//    public function get_latest_products(Request $request)
+//    {
+//        try {
+//
+//            if ($request->category_id) {
+//                if ($request->status === "high_to_low") {
+//                    $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
+//                    return $this->respond($products, [], 200);
+//                }
+//                if ($request->status === "low_to_high") {
+//                    $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
+//                    return $this->respond($products, [], 200);
+//                }
+//                if ($request->status === 'undefined') {
+//                    //  return  var_dump($request->category_id);
+//                    $users = Product::whereJsonContains('category_ids->id', (int)$request->category_id)->get();
+//                    return $this->respond($users, [], 200);
+//                    // $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
+//                    // return $this->respond($products, [], 200);
+//                }
+//                // return $id;
+//
+//                $products = CategoryManager::products($request->category_id);
+//
+//                if ($request->price_start) {
+//                    $productsPrice = ProductManager::get_by_price_products(
+//                        $request['price_start'],
+//                        $request['price_end'],
+//                        '',
+//                        $request['limit'],
+//                        $request['offset']);
+//                }
+//            } elseif ($request->price_start) {
+//                    $products = ProductManager::get_by_price_products(
+//                        $request['price_start'],
+//                        $request['price_end'],
+//                        '',
+//                        $request['limit'],
+//                        $request['offset']);
+//            } else {
+//                if($request->status === "high_to_low"){
+//                    $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
+//                    return $this->respond($products,[],200);
+//                }
+//                if($request->status === "low_to_high"){
+//                    $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
+//                    return $this->respond($products,[],200);
+//                }
+//
+//                $products = ProductManager::get_latest_products($request['limit'], $request['offset']);
+//            }
+//            return $this->respond($products,[],200);
+//
+//        }catch (\Exception $e){
+//
+//            return $this->respond([],[],500,$e->getMessage());
+//        }
+//    }
 
     public function get_trading_products(Request $request)
     {
