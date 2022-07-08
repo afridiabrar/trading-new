@@ -75,7 +75,15 @@ class GeneralController extends Controller
                 "message" => $request->input('message'),
             ]);
 
-            $p = $request->all();
+            $p = [
+                "f_name" => $request->input('name'),
+                "email" => $request->input('email'),
+                "phone" => $request->input('mobile_number'),
+                "subject" => $request->input('subject'),
+                "message" => $request->input('message'),
+            ];
+
+//            $p = $request->all();
             $p += ['mail_title' => 'This is Contact Us form mail from Trading.com'];
             Mail::to($request->input('email'))->send(new \App\Mail\MyDemoMail($p));
 
