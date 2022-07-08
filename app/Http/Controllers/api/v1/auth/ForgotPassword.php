@@ -36,7 +36,7 @@ class ForgotPassword extends Controller
                     'created_at' => now(),
                 ]);
                 $reset_url = url('/') . '/customer/auth/reset-password?token=' . $token;
-                $reset_url = 'http://192.168.3.114:3000/newpassword?token='.$token;
+                $reset_url = 'http://trading.custom-ourbase.com/newpassword?token='.$token;
                 Mail::to($customer['email'])->send(new \App\Mail\PasswordResetMail($reset_url));
                 return $this->respond([],[],200,"Email sent successfully.");
 //                return response()->json(['message' => 'Email sent successfully.'], 200);
