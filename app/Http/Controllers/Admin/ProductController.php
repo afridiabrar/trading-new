@@ -401,7 +401,7 @@ class ProductController extends BaseController
 
         if ($request->sub_category_id != null) {
             $getCategory = Category::where('id', $request->sub_category_id)->first();
-            array_push($category, [
+            array_push($subcategory, [
                 'id' => $request->sub_category_id,
                 'name' => $getCategory->name,
                 'slug' => $getCategory->slug,
@@ -416,6 +416,7 @@ class ProductController extends BaseController
         //            ]);
         //        }
         $product->category_ids = json_encode($category, true);
+        $product->sub_category_id = json_encode($subcategory, true);
         $product->brand_id = $request->brand_id;
         $product->unit = $request->unit;
         $product->details = $request->details;
