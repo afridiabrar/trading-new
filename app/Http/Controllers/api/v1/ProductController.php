@@ -126,7 +126,7 @@ class ProductController extends Controller
     {
         try {
 
-            $product = ProductManager::get_product($id);
+            $product = Product::find($id);
 
             if(empty($product)) return $this->respond([],[], 404,'product not found');
 
