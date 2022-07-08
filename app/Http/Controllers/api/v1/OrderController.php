@@ -113,7 +113,7 @@ class OrderController extends Controller
 //            return $amount;
 
             $x = Charge::create ([
-                "amount" => (int) $amount,
+                "amount" => $amount * 100,
                 "currency" => "usd",
                 "source" => $request->input('stripe_token'),
                 "description" => "New Order"

@@ -141,9 +141,9 @@ class CartManager
         if (!empty($cart)) {
             foreach ($cart as $item) {
                 $product_subtotal = $item['price'] *  $item['quantity']
-                    + ( $item['productitem']['tax'] * $item['quantity'])
+//                    + ( $item['productitem']['tax'] * $item['quantity'])
 //                    + $item['productitem']['shipping_cost']
-                     - (int)$item['productitem']['discount']* $item['quantity']
+                     - $item['productitem']['discount']* $item['quantity']
                     ;
                  $total  =  $product_subtotal;
 //                $total  = 5.00;

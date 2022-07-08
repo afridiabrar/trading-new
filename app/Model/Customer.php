@@ -11,4 +11,13 @@ class Customer extends Authenticatable
 {
     use Notifiable, HasApiTokens;
 
+    public function getImageAttribute($value)
+    {
+        if ($value) {
+            return url($value);
+        } else {
+            return url('/storage/app/public/profile/no-image-found.webp');
+        }
+    }
+
 }
