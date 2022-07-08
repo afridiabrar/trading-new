@@ -458,7 +458,7 @@
 
                 <div class="card">
                     <div class="card-body" style="padding: 20px">
-                        <h5>{{trans('messages.copy_right')}} {{$company_copyright_text->value}}</h5>
+                        <h5>{{trans('messages.copy_right')}} {{date('Y')}}</h5>
                         <button type="submit" class="btn btn-primary float-right" data-toggle="modal"
                                 data-target="#companyCopyRight">{{trans('messages.Edit')}}
                         </button>
