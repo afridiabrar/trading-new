@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\api\v1;
 
+use App\CPU\CategoryManager;
 use App\CPU\Helpers;
 use App\CPU\ProductManager;
 use App\Http\Controllers\Controller;
@@ -21,16 +22,44 @@ class ProductController extends Controller
     {
         try {
 
-            if($request->status === "high_to_low"){
-                $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
-                return $this->respond($products,[],200);
-            }
-            if($request->status === "low_to_high"){
-                $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
-                return $this->respond($products,[],200);
-            }
+            if ($request->category_id) {
+                if ($request->status === "high_to_low") {
+                    $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
+                    return $this->respond($products, [], 200);
+                }
+                if ($request->status === "low_to_high") {
+                    $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
+                    return $this->respond($products, [], 200);
+                }
+                if ($request->status === 'undefined') {
+                    //  return  var_dump($request->category_id);
+                    $users = Product::whereJsonContains('category_ids->id', (int)$request->category_id)->get();
+                    return $this->respond($users, [], 200);
+                    // $products = CategoryManager::products($request->category_id, $limit = 10, $offset = 1, $request->status);
+                    // return $this->respond($products, [], 200);
+                }
+                // return $id;
 
-            $products = ProductManager::get_latest_products($request['limit'], $request['offset']);
+                $products = CategoryManager::products($request->category_id);
+            } elseif ($request->start) {
+                    $products = ProductManager::get_by_price_products(
+                        $request['start'],
+                        $request['end'],
+                        '',
+                        $request['limit'],
+                        $request['offset']);
+            } else {
+                if($request->status === "high_to_low"){
+                    $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
+                    return $this->respond($products,[],200);
+                }
+                if($request->status === "low_to_high"){
+                    $products = ProductManager::get_latest_products($request['limit'], $request['offset'],$request->status);
+                    return $this->respond($products,[],200);
+                }
+
+                $products = ProductManager::get_latest_products($request['limit'], $request['offset']);
+            }
             return $this->respond($products,[],200);
 
         }catch (\Exception $e){
