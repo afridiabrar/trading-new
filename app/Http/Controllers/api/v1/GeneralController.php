@@ -77,6 +77,7 @@ class GeneralController extends Controller
 
             $p = [
                 "f_name" => $request->input('name'),
+                "l_name" => '',
                 "email" => $request->input('email'),
                 "phone" => $request->input('mobile_number'),
                 "subject" => $request->input('subject'),
