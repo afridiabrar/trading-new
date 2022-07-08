@@ -27,7 +27,7 @@ class Blog extends Model
 
     public function getImageAttribute($value)
     {
-        if ($this->image) {
+        if ($value) {
             return url('/storage/blog/'.$value);
         }
     }
