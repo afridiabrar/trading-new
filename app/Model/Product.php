@@ -133,7 +133,7 @@ class Product extends Model
 
     public function getThumbnailUrlAttribute()
     {
-        return url('storage/product/thumbnail/'.$this->thumbnail);
+        return url('storage/product/'.$this->thumbnail);
         // return url('storage/app/public/product/thumbnail/'.$this->thumbnail);
     }
 }
