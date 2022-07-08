@@ -77,9 +77,10 @@ class GeneralController extends Controller
 
             $p = $request->all();
             $p += ['mail_title' => 'This is Contact Us form mail from Trading.com'];
+            Mail::to($request->input('email'))->send(new \App\Mail\MyDemoMail($p));
 
-            $this->sendEmail($p);
-            exit();
+//            $this->sendEmail($p);
+//            exit();
             return $this->respond(['contact' => $contact], [], 200, 'Message Send Successfully!');
         } catch (\Exception $e) {
             return $this->respond([], [], 500, $e->getMessage());
