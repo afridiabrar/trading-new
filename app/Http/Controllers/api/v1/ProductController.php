@@ -37,8 +37,8 @@ class ProductController extends Controller
             if(request()->has('brand_id') AND request()->get('brand_id')){
                 $productQuery->where('brand_id',request()->get('brand_id'));
             }
-            return $this->respond(request()->get('take') || 20,[],200);
-            $products = $productQuery->paginate(request()->get('take') || 20);
+//            return $this->respond(request()->get('take',20),[],200);
+            $products = $productQuery->paginate(request()->get('take',20));
             return $this->respond($products,[],200);
         }
         catch (\Exception $e){
