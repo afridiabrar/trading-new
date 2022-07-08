@@ -388,6 +388,7 @@ class ProductController extends BaseController
         }
 
         $category = [];
+        $subcategory = [];
 
         if ($request->category_id != null) {
             $getCategory = Category::where('id', $request->category_id)->first();
