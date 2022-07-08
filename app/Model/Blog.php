@@ -25,10 +25,10 @@ class Blog extends Model
         return $this->belongsTo(BlogCategory::class, 'blog_category_id', 'id');
     }
 
-    public function getImageAttribute()
+    public function getImageAttribute($value)
     {
         if ($this->image) {
-            return url('/storage/blog/'.$this->image);
+            return url('/storage/blog/'.$value);
         }
     }
 }
