@@ -73,7 +73,7 @@ class User extends Authenticatable
     public function getProfileUrlAttribute()
     {
         if ($this->image) {
-            return url('storage/app/public/profile/'.$this->image);
+            return url('/storage/profile/'.$this->image);
         } else {
             return url('/storage/profile/no-image-found.webp');
         }
