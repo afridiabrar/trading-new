@@ -33,6 +33,6 @@ class MyDemoMail extends Mailable
      */
     public function build()
     {
-        return $this->subject(' ')->view('emails.myDemoMail');
+        return $this->subject(' ')->view('emails.myDemoMailContact');
     }
 }
