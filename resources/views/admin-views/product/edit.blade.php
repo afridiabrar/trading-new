@@ -189,7 +189,11 @@
                                         <select
                                             class="js-example-basic-multiple js-states js-example-responsive form-control"
                                             name="sub_category_id" id="sub-category-select"
-                                            data-id="{{ count([$product_category]) >= 2 ? $product_category[1]->id : '' }}"
+                                            @if($sub_product_category !== null)
+                                            data-id="{{ count([$sub_product_category]) >= 0 ? $sub_product_category[0]->id : '' }}"
+                                            @else
+                                            data-id="0"
+                                            @endif
                                             onchange="getRequest('{{ url('/') }}/admin/product/get-categories?parent_id='+this.value,'sub-sub-category-select','select')">
                                         </select>
                                     </div>

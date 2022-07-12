@@ -325,15 +325,17 @@ class ProductController extends BaseController
     public function edit($id)
     {
         $product = Product::withoutGlobalScopes()->with('translations')->find($id);
-
+//        dd($product->sub_category_id);
         $product_category = json_decode($product->category_ids);
+        $sub_product_category = json_decode($product->sub_category_id);
 
+//        dd($sub_product_category);
         if (!empty($product_category->id)) {
             $product_category_id = json_decode($product_category->id);
         } else {
             $product_category_id = json_decode($product_category[0]->id);
         }
-// dd($product_category_id);
+// dd($product_category);
         if ($product->colors) {
             $product->colors = json_decode($product->colors);
         }
@@ -343,7 +345,7 @@ class ProductController extends BaseController
         $br = Brand::orderBY('name', 'ASC')->get();
         // dd($br);
 
-        return view('admin-views.product.edit', compact('categories', 'br', 'product', 'product_category', 'product_category_id'));
+        return view('admin-views.product.edit', compact('categories', 'br', 'product', 'product_category', 'product_category_id', 'sub_product_category'));
     }
 
     public function update(Request $request, $id)
