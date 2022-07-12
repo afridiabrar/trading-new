@@ -25,8 +25,8 @@ class ProductController extends Controller
                 $productQuery->whereJsonContains('category_ids->id', (int) request()->category_id);
             }
             if(request()->has('subcategory_id') AND request()->get('subcategory_id')){
-                $productQuery->whereJsonContains('category_ids->id', (int) request()->subcategory_id)
-                    ->whereJsonContains('category_ids->parent_id',0,'and',true);
+                $productQuery->whereJsonContains('sub_category_id->id', (int) request()->subcategory_id);
+//                    ->whereJsonContains('category_ids->parent_id',0,'and',true);
             }
             if(request()->has('price_start') AND request()->get('price_start')){
                 $productQuery->where('unit_price','>=',request()->price_start);
