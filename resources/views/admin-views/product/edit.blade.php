@@ -190,7 +190,7 @@
                                             class="js-example-basic-multiple js-states js-example-responsive form-control"
                                             name="sub_category_id" id="sub-category-select"
                                             @if($sub_product_category !== null)
-                                            data-id="{{ $sub_product_category >= 0 ? $sub_product_category[0]->id : '' }}"
+                                            data-id="{{ $sub_product_category ? $sub_product_category->id : '' }}"
                                             @else
                                             data-id="0"
                                             @endif
