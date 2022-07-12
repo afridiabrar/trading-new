@@ -47,6 +47,8 @@ class PassportAuthController extends Controller
             ]);
             $p = $request->all();
             $p += ['mail_title' => 'New User Singup in Trading.com'];
+            $p += ['subject' => ''];
+            $p += ['message' => ''];
             Mail::to($user['email'])->send(new \App\Mail\MyDemoMail($p));
 //            $this->sendEmail($p);
 
