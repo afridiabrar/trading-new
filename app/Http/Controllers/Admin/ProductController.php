@@ -104,13 +104,13 @@ class ProductController extends BaseController
         }
 
         if ($request->sub_category_id != null) {
-            $getCategory = Category::where('id', $request->sub_category_id)->first();
-            array_push($category, [
-                'id' => $request->sub_category_id,
-                'name' => $getCategory->name,
-                'slug' => $getCategory->slug,
-                'position' => 2,
-            ]);
+            $getSubCategory = Category::where('id', $request->sub_category_id)->first();
+//            array_push($category, [
+//                'id' => $request->sub_category_id,
+//                'name' => $getCategory->name,
+//                'slug' => $getCategory->slug,
+//                'position' => 2,
+//            ]);
         }
 
         //        if ($request->sub_sub_category_id != null) {
@@ -121,6 +121,7 @@ class ProductController extends BaseController
         //        }
 
         $p->category_ids = json_encode($category, true);
+        $p->sub_category_id = json_encode($getSubCategory, true);
         $p->brand_id = $request->brand_id;
         $p->unit = $request->unit;
         $p->details = $request->details;
@@ -403,13 +404,13 @@ class ProductController extends BaseController
         }
 
         if ($request->sub_category_id != null) {
-            $getCategory = Category::where('id', $request->sub_category_id)->first();
-            array_push($subcategory, [
-                'id' => $request->sub_category_id,
-                'name' => $getCategory->name,
-                'slug' => $getCategory->slug,
-                'position' => 2,
-            ]);
+            $getSubCategory = Category::where('id', $request->sub_category_id)->first();
+//            array_push($subcategory, [
+//                'id' => $request->sub_category_id,
+//                'name' => $getCategory->name,
+//                'slug' => $getCategory->slug,
+//                'position' => 2,
+//            ]);
         }
 
         //        if ($request->sub_sub_category_id != null) {
@@ -419,7 +420,7 @@ class ProductController extends BaseController
         //            ]);
         //        }
         $product->category_ids = json_encode($category, true);
-        $product->sub_category_id = json_encode($subcategory, true);
+        $product->sub_category_id = json_encode($getSubCategory, true);
         $product->brand_id = $request->brand_id;
         $product->unit = $request->unit;
         $product->details = $request->details;
