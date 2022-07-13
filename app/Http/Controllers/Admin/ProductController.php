@@ -91,16 +91,17 @@ class ProductController extends BaseController
             $p->trade_qty = $request->input('trade_qty');
         }
 
-        $category = [];
+        $getCategory = [];
+        $getSubCategory = [];
 
         if ($request->category_id != null) {
             $getCategory = Category::where('id', $request->category_id)->first();
-            array_push($category, [
-                'id' => $request->category_id,
-                'name' => $getCategory->name,
-                'slug' => $getCategory->slug,
-                'position' => 1,
-            ]);
+//            array_push($category, [
+//                'id' => $request->category_id,
+//                'name' => $getCategory->name,
+//                'slug' => $getCategory->slug,
+//                'position' => 1,
+//            ]);
         }
 
         if ($request->sub_category_id != null) {
@@ -120,7 +121,7 @@ class ProductController extends BaseController
         //            ]);
         //        }
 
-        $p->category_ids = json_encode($category, true);
+        $p->category_ids = json_encode($getCategory, true);
         $p->sub_category_id = json_encode($getSubCategory, true);
         $p->brand_id = $request->brand_id;
         $p->unit = $request->unit;
@@ -390,17 +391,17 @@ class ProductController extends BaseController
             $product->is_trade = 0;
         }
 
-        $category = [];
-        $subcategory = [];
+        $getCategory = [];
+        $getSubCategory = [];
 
         if ($request->category_id != null) {
             $getCategory = Category::where('id', $request->category_id)->first();
-            array_push($category, [
-                'id' => $request->category_id,
-                'name' => $getCategory->name,
-                'slug' => $getCategory->slug,
-                'position' => 1,
-            ]);
+//            array_push($category, [
+//                'id' => $request->category_id,
+//                'name' => $getCategory->name,
+//                'slug' => $getCategory->slug,
+//                'position' => 1,
+//            ]);
         }
 
         if ($request->sub_category_id != null) {
@@ -419,7 +420,7 @@ class ProductController extends BaseController
         //                'position' => 3,
         //            ]);
         //        }
-        $product->category_ids = json_encode($category, true);
+        $product->category_ids = json_encode($getCategory, true);
         $product->sub_category_id = json_encode($getSubCategory, true);
         $product->brand_id = $request->brand_id;
         $product->unit = $request->unit;
