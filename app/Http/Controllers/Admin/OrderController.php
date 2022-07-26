@@ -94,7 +94,7 @@ class OrderController extends Controller
     {
         if ($request->ajax()) {
             $order = Order::find($request->id);
-            $order->payment_status = $request->payment_status;
+            $order->payment_status = $request->payment_status == "unpaid" ? 'unpaid' : 'paid';
             $order->save();
             $data = $request->payment_status;
             return response()->json($data);
