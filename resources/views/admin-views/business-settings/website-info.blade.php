@@ -553,7 +553,7 @@
                             @csrf
                             <div class="row">
                                 <div class="custom-file col-9">
-                                    <input type="file" name="image" id="customFileUploadWFL" class="custom-file-input"
+                                    <input type="file" name="company_footer_logo" id="customFileUploadWFL" class="custom-file-input"
                                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*">
                                     <label class="custom-file-label"
                                            for="customFileUploadWFL">{{trans('messages.choose')}} {{trans('messages.file')}}</label>
