@@ -193,7 +193,7 @@ class GeneralController extends Controller
     public function blogs()
     {
         try {
-            $Ads = Blog::where('published', 1)->paginate(6);
+            $Ads = Blog::orderBy('id','Desc')->where('published', 1)->paginate(6);
             return $this->respond(['blogs' => $Ads], [], 200, 'success');
         } catch (\Exception $e) {
             DB::rollBack();
