@@ -12,7 +12,7 @@ class Ad extends Model
 
     public function getImageUrlAttribute()
     {
-        return asset('storage/app/public/ads/'.$this->image);
+        return asset('storage/ads/'.$this->image);
     }
 
 

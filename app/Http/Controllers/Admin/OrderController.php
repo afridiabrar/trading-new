@@ -26,9 +26,9 @@ class OrderController extends Controller
             $data = OrderDetail::where(['seller_id' => 0])->pluck('order_id')->toArray();
             $query = Order::with(['customer'])->whereIn('id', array_unique($data));
             if ($status != 'all') {
-                $orders = $query->where(['order_status' => $status])->latest()->paginate(25);
+                $orders = $query->where(['order_status' => $status])->orderBy('id', 'DESC')->paginate(25);
             } else {
-                $orders = $query->latest()->paginate(15);
+                $orders = $query->orderBy('id', 'DESC')->paginate(15);
             }
         } else {
             if ($status != 'all') {
