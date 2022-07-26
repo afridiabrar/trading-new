@@ -34,8 +34,8 @@ class OrderManager
                 'id' => 100000 + Order::all()->count() + 1,
                 'customer_id' => $customer_id,
                 'customer_type' => 'customer',
-                'payment_status' => 'unpaid',
-                'order_status' => 'pending',
+                'payment_status' => 'paid',
+                'order_status' => 'processing',
                 'payment_method' => $payment_method,
                 'transaction_ref' => $ref_id,
                 'discount_amount' => $discount,
@@ -43,6 +43,7 @@ class OrderManager
                 'order_amount' => CartManager::cart_grand_total($cart) - $discount,
 //                'order_amount' => floatval($totalAmount) - $discount,
                 'shipping_address' => $customer_info['address'],
+                'tracking_status' => 'waiting_for_driver_assignment',
                 'created_at' => now(),
                 'updated_at' => now()
             ];
