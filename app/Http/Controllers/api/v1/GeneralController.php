@@ -21,6 +21,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 use Throwable;
 use App\Mail\MailNotify;
 use Illuminate\Support\Facades\Log;
@@ -121,15 +122,39 @@ class GeneralController extends Controller
     public function webConfig()
     {
         try {
-            $company_name = BusinessSetting::where('type', 'company_name')->first();
-            $company_email = BusinessSetting::where('type', 'company_email')->first();
-            $company_phone = BusinessSetting::where('type', 'company_phone')->first();
-            $contact = array(
-                'name' => $company_name,
-                'email' => $company_email,
-                'phone' => $company_phone,
-            );
-            return $this->respond(['contact' => $contact], [], 200, 'Retrieved Successfully!');
+            $web = BusinessSetting::all();
+            $settings = Helpers::get_settings($web, 'colors');
+            $data = json_decode($settings['value'], true);
+
+            $webLogo = null;
+            if (Helpers::get_settings($web, 'company_web_logo')) {
+                $logo = Helpers::get_settings($web, 'company_web_logo');
+                $webLogo = asset('storage/app/public/company').'/'.$logo->value;
+            }
+
+            $footerLogo = null;
+            if (Helpers::get_settings($web, 'company_footer_logo')) {
+                $fLogo = Helpers::get_settings($web, 'company_web_logo');
+                $footerLogo = asset('storage/app/public/company').'/'.$fLogo->value;
+            }
+
+            $temp = [
+                'name' => Helpers::get_settings($web, 'company_name')->value,
+                'phone' => Helpers::get_settings($web, 'company_phone')->value,
+                'web_logo' => $webLogo,
+                'email' => Helpers::get_settings($web, 'company_email')->value,
+                'footer_logo' =>$footerLogo,
+                'copyright_text' => Helpers::get_settings($web, 'company_copyright_text')->value,
+            ];
+//            $company_name = BusinessSetting::where('type', 'company_name')->first();
+//            $company_email = BusinessSetting::where('type', 'company_email')->first();
+//            $company_phone = BusinessSetting::where('type', 'company_phone')->first();
+////            $contact = array(
+////                'name' => $company_name,
+////                'email' => $company_email,
+////                'phone' => $company_phone,
+////            );
+            return $this->respond(['contact' => $temp], [], 200, 'Retrieved Successfully!');
         } catch (\Exception $e) {
 
             return $this->respond([], [], 500, $e->getMessage());

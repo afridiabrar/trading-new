@@ -390,6 +390,7 @@ class BusinessSettingsController extends Controller
     public function uploadWebLogo(Request $data)
     {
         $img = BusinessSetting::where(['type' => 'company_web_logo'])->pluck('value')[0];
+
         if ($data->image) {
             $img = ImageManager::update('company/', $img, 'png', $data->file('image'));
         }

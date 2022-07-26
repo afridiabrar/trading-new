@@ -567,38 +567,38 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>{{trans('messages.web_fav_icon')}} </h5>
-                        <span class="badge badge-soft-danger">( ratio 1:1 )</span>
-                    </div>
-                    <div class="card-body" style="padding: 20px">
-                        <center>
-                            <img width="60" id="viewerFI"
-                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
-                                 src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_fav_icon'])->pluck('value')[0]}}">
-                        </center>
-                        <hr>
-                        <form action="{{route('admin.business-settings.web-config.company-fav-icon')}}"
-                              method="post" enctype="multipart/form-data">
-                            @csrf
-                            <div class="row">
-                                <div class="custom-file col-9">
-                                    <input type="file" name="image" id="customFileUploadFI" class="custom-file-input"
-                                           accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*">
-                                    <label class="custom-file-label"
-                                           for="customFileUploadFI">{{trans('messages.choose')}} {{trans('messages.file')}}</label>
-                                </div>
-                                <div class="col-3">
-                                    <button type="submit"
-                                            class="btn btn-primary float-right ml-3">{{trans('messages.Save')}}</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="col-md-6">--}}
+{{--                <div class="card">--}}
+{{--                    <div class="card-header">--}}
+{{--                        <h5>{{trans('messages.web_fav_icon')}} </h5>--}}
+{{--                        <span class="badge badge-soft-danger">( ratio 1:1 )</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-body" style="padding: 20px">--}}
+{{--                        <center>--}}
+{{--                            <img width="60" id="viewerFI"--}}
+{{--                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"--}}
+{{--                                 src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_fav_icon'])->pluck('value')[0]}}">--}}
+{{--                        </center>--}}
+{{--                        <hr>--}}
+{{--                        <form action="{{route('admin.business-settings.web-config.company-fav-icon')}}"--}}
+{{--                              method="post" enctype="multipart/form-data">--}}
+{{--                            @csrf--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="custom-file col-9">--}}
+{{--                                    <input type="file" name="image" id="customFileUploadFI" class="custom-file-input"--}}
+{{--                                           accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*">--}}
+{{--                                    <label class="custom-file-label"--}}
+{{--                                           for="customFileUploadFI">{{trans('messages.choose')}} {{trans('messages.file')}}</label>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-3">--}}
+{{--                                    <button type="submit"--}}
+{{--                                            class="btn btn-primary float-right ml-3">{{trans('messages.Save')}}</button>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
         </div>
 
