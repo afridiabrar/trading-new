@@ -129,13 +129,13 @@ class GeneralController extends Controller
             $webLogo = null;
             if (Helpers::get_settings($web, 'company_web_logo')) {
                 $logo = Helpers::get_settings($web, 'company_web_logo');
-                $webLogo = asset('storage/app/public/company').'/'.$logo->value;
+                $webLogo = asset('storage/company').'/'.$logo->value;
             }
 
             $footerLogo = null;
             if (Helpers::get_settings($web, 'company_footer_logo')) {
                 $fLogo = Helpers::get_settings($web, 'company_web_logo');
-                $footerLogo = asset('storage/app/public/company').'/'.$fLogo->value;
+                $footerLogo = asset('storage/company').'/'.$fLogo->value;
             }
 
             $temp = [
