@@ -37,6 +37,14 @@ class ProductController extends Controller
             if(request()->has('brand_id') AND request()->get('brand_id')){
                 $productQuery->where('brand_id',request()->get('brand_id'));
             }
+
+            if(request()->has('status') && request()->has('status') == 'high_to_low'){
+                $productQuery->orderBy('price', 'Desc');
+            }
+
+            if(request()->has('status') && request()->has('status') == 'low_to_high'){
+                $productQuery->orderBy('price', 'ASC');
+            }
 //            return $this->respond(request()->get('take',20),[],200);
             $products = $productQuery->paginate(request()->get('take',20))->appends(request()->all());
             return $this->respond($products,[],200);
