@@ -566,7 +566,7 @@
                 success: function (data) {
                     $('.banner_form').attr('action', "{{route('admin.banner.update')}}");
                     // console.log(data);
-                    if (data.banner_type == 'Main Banner') {
+                    // if (data.banner_type == 'Main Banner') {
 
                         $('#main-banner').show();
                         $('#banner-table').hide();
@@ -582,7 +582,7 @@
                         $('#mbImageviewer').attr('src', "{{asset('storage/banner')}}" + "/" + data.photo);
                         $('#cate-table').hide();
 
-                    }
+                    // }
                     {{--else if (data.banner_type == 'Footer Banner') {--}}
 
                     {{--    $('#secondary-banner').show();--}}
