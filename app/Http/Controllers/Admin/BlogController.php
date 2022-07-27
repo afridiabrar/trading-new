@@ -61,6 +61,7 @@ class BlogController extends Controller
         $blog->slug = Str::slug($request->input('title'));
         $blog->image = ImageManager::upload('blog/', 'png', $request->file('image'));;
         $blog->content = $request->input('content');
+        $blog->published = 1;
         $blog->save();
 
         Toastr::success('Blog created successfully!');

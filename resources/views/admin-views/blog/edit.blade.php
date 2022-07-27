@@ -187,7 +187,7 @@
                                             <img
                                                 style="width: 30%;border: 1px solid; border-radius: 10px;"
                                                 id="viewer"
-                                                src="{!! (isset($blog->image)) ? asset('storage/app/public/blog') . '/' . $blog->image : asset('assets/back-end/img/900x400/img1.jpg') !!}"
+                                                src="{!! (isset($blog->image)) ? asset('storage/blog') . '/' . $blog->image : asset('assets/back-end/img/900x400/img1.jpg') !!}"
                                                 alt="image"/>
                                         </center>
                                     </div>

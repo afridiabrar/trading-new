@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="form-group pt-4">
                                     <label class="input-label" for="description">{{trans('messages.content')}}</label>
-                                    <textarea name="content" class="editor textarea" cols="30"
+                                    <textarea name="content" id="editor" class="editor textarea" cols="30"
                                               rows="10" required>{!! old('content') !!}</textarea>
                                 </div>
                                 <div class="col-6 from_part_2">
@@ -233,8 +233,8 @@
     </script>
 
     {{--ck editor--}}
-    <script src="{{asset('/')}}vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script src="{{asset('/')}}vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
-    <script>$('.textarea').ckeditor();</script>
+{{--    <script src="{{asset('/')}}vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>--}}
+{{--    <script src="{{asset('/')}}vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>--}}
+{{--    <script>$('.editor').ckeditor();</script>--}}
     {{--ck editor--}}
 @endpush

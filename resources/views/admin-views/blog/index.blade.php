@@ -116,7 +116,7 @@
                                         <td>
                                             <img width="64"
                                                  onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
-                                                 src="{{asset('storage/app/public/blog')}}/{{$blog->image}}">
+                                                 src="{{asset('storage/blog')}}/{{$blog->image}}">
                                         </td>
                                         <td>
                                             <label class="switch">
