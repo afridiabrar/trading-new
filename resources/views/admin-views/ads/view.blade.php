@@ -360,7 +360,7 @@
                                         <td>
                                             <img width="80"
                                                  onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
-                                                 src="{{asset('storage/app/public/ads')}}/{{$ad->image}}">
+                                                 src="{{asset('storage/ads')}}/{{$ad->image}}">
                                         </td>
                                         <td>{{$ad->title}}</td>
                                         <td>{{$ad->sub_title}}</td>
@@ -577,7 +577,7 @@
                         $('#button_name').val(data.button_name);
                         $('#url').val(data.url);
                         $('#url').siblings('#id').val(data.id);
-                        $('#mbImageviewer').attr('src', "{{asset('storage/app/public/ads')}}" + "/" + data.image);
+                        $('#mbImageviewer').attr('src', "{{asset('storage/ads')}}" + "/" + data.image);
                         $('#cate-table').hide();
 
                     // }
@@ -591,7 +591,7 @@
                     {{--    // $('#id').val(data.id);--}}
                     {{--    $('#footerurl').val(data.url);--}}
                     {{--    $('#footerurl').siblings('#id').val(data.id);--}}
-                    {{--    $('#fbImageviewer').attr('src', "{{asset('storage/app/public/banner')}}" + "/" + data.photo);--}}
+                    {{--    $('#fbImageviewer').attr('src', "{{asset('storage/banner')}}" + "/" + data.photo);--}}
                     {{--    $('#cate-table').hide();--}}
 
 
@@ -604,7 +604,7 @@
                     {{--    // $('#id').val(data.id);--}}
                     {{--    $('#popupurl').val(data.url);--}}
                     {{--    $('#popupurl').siblings('#id').val(data.id);--}}
-                    {{--    $('#pbImageviewer').attr('src', "{{asset('storage/app/public/banner')}}" + "/" + data.photo);--}}
+                    {{--    $('#pbImageviewer').attr('src', "{{asset('storage/banner')}}" + "/" + data.photo);--}}
                     {{--    $('#cate-table').hide();--}}
                     {{--}--}}
 
