@@ -544,8 +544,8 @@
                     <div class="card-body" style="padding: 20px">
                         <center>
                             <img width="200" id="viewerWFL"
-                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
-                                 src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_footer_logo'])->pluck('value')[0]}}">
+{{--                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"--}}
+                                 src="{{asset('storage/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_footer_logo'])->pluck('value')[0]}}">
                         </center>
                         <hr>
                         <form action="{{route('admin.business-settings.web-config.company-footer-logo-upload')}}"
@@ -553,7 +553,7 @@
                             @csrf
                             <div class="row">
                                 <div class="custom-file col-9">
-                                    <input type="file" name="company_footer_logo" id="customFileUploadWFL" class="custom-file-input"
+                                    <input type="file" name="image" id="customFileUploadWFL" class="custom-file-input"
                                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*">
                                     <label class="custom-file-label"
                                            for="customFileUploadWFL">{{trans('messages.choose')}} {{trans('messages.file')}}</label>

@@ -390,7 +390,6 @@ class BusinessSettingsController extends Controller
     public function uploadWebLogo(Request $data)
     {
         $img = BusinessSetting::where(['type' => 'company_web_logo'])->pluck('value')[0];
-
         if ($data->image) {
             $img = ImageManager::update('company/', $img, 'png', $data->file('image'));
         }
@@ -413,7 +412,6 @@ class BusinessSettingsController extends Controller
         ]);
         Toastr::success('Footer Logo updated successfully!');
         return back();
-
     }
 
     public function uploadFavIcon(Request $data)
