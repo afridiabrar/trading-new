@@ -42,7 +42,7 @@ class GeneralController extends Controller
     {
         try {
             //            return response()->json(HelpTopic::orderBy('ranking')->get(),200);
-            return $this->respond(['faqs' => HelpTopic::orderBy('ranking')->get()], [], 200);
+            return $this->respond(['faqs' => HelpTopic::orderBy('id', 'DESC')->get()], [], 200);
         } catch (\Exception $e) {
             return $this->respond([], [], 500, $e->getMessage());
             //            return response()->json(['message' => $e->getMessage()], 500);

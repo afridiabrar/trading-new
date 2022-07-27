@@ -73,7 +73,7 @@ class HelpTopicController extends Controller
     }
 
     function list() {
-        $helps = HelpTopic::latest()->get();
+        $helps = HelpTopic::orderBy('id', 'DESC')->get();
         return view('admin-views.help-topics.list', compact('helps'));
     }
 
