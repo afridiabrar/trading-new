@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="form-group pt-4">
                                     <label class="input-label">{{ trans('messages.description') }}</label>
-                                    <textarea name="details" style="display:none" class="textarea" required>{!! $product['details'] !!}</textarea>
+                                    <textarea name="details" id="editor" style="display:none" class="textarea" required>{!! $product['details'] !!}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -856,10 +856,10 @@
     {{-- </script> --}}
 
     {{-- ck editor --}}
-    <script src="{{ asset('/') }}vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script src="{{ asset('/') }}vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
-    <script>
-        $('.textarea').ckeditor();
-    </script>
+{{--    <script src="{{ asset('/') }}vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>--}}
+{{--    <script src="{{ asset('/') }}vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>--}}
+{{--    <script>--}}
+{{--        $('.textarea').ckeditor();--}}
+{{--    </script>--}}
     {{-- ck editor --}}
 @endpush
