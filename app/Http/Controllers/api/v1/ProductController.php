@@ -38,12 +38,12 @@ class ProductController extends Controller
                 $productQuery->where('brand_id',request()->get('brand_id'));
             }
 
-            if(request()->has('status') && request()->has('status') == 'high_to_low'){
+            if(request()->has('status') && request('status') == 'high_to_low'){
                 $productQuery->orderBy('unit_price', 'Desc');
             }
 
-            if(request()->has('status') && request()->has('status') == 'low_to_high'){
-                $productQuery->orderBy('unit_price', 'ASC');
+            if(request()->has('status') && request('status') == 'low_to_high'){
+                $productQuery->orderBy('unit_price');
             }
 //            return $this->respond(request()->get('take',20),[],200);
             $products = $productQuery->paginate(request()->get('take',20))->appends(request()->all());
