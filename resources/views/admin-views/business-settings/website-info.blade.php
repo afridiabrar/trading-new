@@ -478,7 +478,7 @@
                         <center>
                             <img width="200" id="viewerWL"
                                  onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
-                                 src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_web_logo'])->pluck('value')[0]}}">
+                                 src="{{asset('storage/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_web_logo'])->pluck('value')[0]}}">
                         </center>
                         <hr>
                         <form action="{{route('admin.business-settings.web-config.company-web-logo-upload')}}"
@@ -544,7 +544,7 @@
                     <div class="card-body" style="padding: 20px">
                         <center>
                             <img width="200" id="viewerWFL"
-{{--                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"--}}
+                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
                                  src="{{asset('storage/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_footer_logo'])->pluck('value')[0]}}">
                         </center>
                         <hr>
