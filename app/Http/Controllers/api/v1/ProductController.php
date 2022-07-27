@@ -39,11 +39,11 @@ class ProductController extends Controller
             }
 
             if(request()->has('status') && request()->has('status') == 'high_to_low'){
-                $productQuery->orderBy('price', 'Desc');
+                $productQuery->orderBy('unit_price', 'Desc');
             }
 
             if(request()->has('status') && request()->has('status') == 'low_to_high'){
-                $productQuery->orderBy('price', 'ASC');
+                $productQuery->orderBy('unit_price', 'ASC');
             }
 //            return $this->respond(request()->get('take',20),[],200);
             $products = $productQuery->paginate(request()->get('take',20))->appends(request()->all());
