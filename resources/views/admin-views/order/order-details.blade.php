@@ -381,6 +381,10 @@
                             <span class="d-block">
                                     {{trans('messages.Name')}} :
                                 <strong>{{$order->shipping ? $order->shipping['contact_person_name'] : "empty"}}</strong><br>
+                                Email :
+                                <strong>{{$order->shipping ? $order->shipping['email'] : "empty"}}</strong><br>
+                                 {{trans('messages.Phone')}}:
+                                <strong>{{$order->shipping ? $order->shipping['phone']  : "Empty"}}</strong>
                                  {{trans('messages.Country')}}:
                                 <strong>{{$order->shipping ? $order->shipping['country'] : "Empty"}}</strong><br>
                                 {{trans('messages.City')}}:
@@ -389,8 +393,7 @@
                                 <strong>{{$order->shipping ? $order->shipping['zip']  : "Empty"}}</strong><br>
                                 {{trans('messages.address')}} :
                                 <strong>{{$order->shipping ? $order->shipping['address']  : "Empty"}}</strong><br>
-                                {{trans('messages.Phone')}}:
-                                <strong>{{$order->shipping ? $order->shipping['phone']  : "Empty"}}</strong>
+
 
                                 </span>
 
