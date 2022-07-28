@@ -108,7 +108,7 @@
                                     <th scope="col">{{trans('messages.SL#')}}</th>
                                     <th scope="col">{{trans('messages.Question')}}</th>
                                     <th scope="col">{{trans('messages.Answer')}}</th>
-                                    <th scope="col">{{trans('messages.Ranking')}}</th>
+{{--                                    <th scope="col">{{trans('messages.Ranking')}}</th>--}}
                                     <th scope="col">{{trans('messages.Status')}} </th>
                                     <th scope="col">{{trans('messages.Action')}}</th>
                                 </tr>
@@ -119,7 +119,7 @@
                                         <td scope="row">{{$k+1}}</td>
                                         <td>{{$help['question']}}</td>
                                         <td>{{$help['answer']}}</td>
-                                        <td>{{$help['ranking']}}</td>
+{{--                                        <td>{{$help['ranking']}}</td>--}}
 
                                         <td>
                                             <label class="switch">
@@ -199,22 +199,22 @@
                                           rows="5" placeholder="Type Answer"></textarea>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="control-label">Status</div>
-                                        <label class="custom-switch" style="margin-left: -2.25rem;margin-top: 10px;">
-                                            <input type="checkbox" name="status" id="e_status" value="1"
-                                                   class="custom-switch-input">
-                                            <span class="custom-switch-indicator"></span>
-                                            <span class="custom-switch-description">Active</span>
-                                        </label>
-                                    </div>
-                                </div>
+{{--                                <div class="col-md-6">--}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <div class="control-label">Status</div>--}}
+{{--                                        <label class="custom-switch" style="margin-left: -2.25rem;margin-top: 10px;">--}}
+{{--                                            <input type="checkbox" name="status" id="e_status" value="1"--}}
+{{--                                                   class="custom-switch-input">--}}
+{{--                                            <span class="custom-switch-indicator"></span>--}}
+{{--                                            <span class="custom-switch-description">Active</span>--}}
+{{--                                        </label>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="col-md-6">
-                                    <label for="ranking">Ranking</label>
-                                    <input type="number" name="ranking" class="form-control" autofoucs>
-                                </div>
+{{--                                <div class="col-md-6">--}}
+{{--                                    <label for="ranking">Ranking</label>--}}
+{{--                                    <input type="number" name="ranking" class="form-control" autofoucs>--}}
+{{--                                </div>--}}
                             </div>
 
                         </div>
@@ -260,11 +260,11 @@
 
                             </div>
 
-                            <div class="col-md-4">
-                                <label for="ranking">Ranking</label>
-                                <input type="number" name="ranking" class="form-control" id="e_ranking" required
-                                       autofoucs>
-                            </div>
+{{--                            <div class="col-md-4">--}}
+{{--                                <label for="ranking">Ranking</label>--}}
+{{--                                <input type="number" name="ranking" class="form-control" id="e_ranking" required--}}
+{{--                                       autofoucs>--}}
+{{--                            </div>--}}
                             <div class="col-md-4">
 
                             </div>
@@ -320,7 +320,7 @@
                     console.log(data);
                     $("#e_question").val(data.question);
                     $("#e_answer").val(data.answer);
-                    $("#e_ranking").val(data.ranking);
+                    // $("#e_ranking").val(data.ranking);
 
 
                     $("#editForm").attr("action", "update/" + data.id);
