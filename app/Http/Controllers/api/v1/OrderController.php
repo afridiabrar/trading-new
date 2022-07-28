@@ -171,7 +171,7 @@ class OrderController extends Controller
             }
             if($tracking_status == "delivered"){
                 $waiting_for_driver_assignment = true;
-                $waiting_for_driver_assignment = true;
+                $order_picked_up_from_location = true;
                 $order_on_way = true;
                 $delivered = true;
             }

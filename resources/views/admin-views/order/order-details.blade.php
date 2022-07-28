@@ -384,7 +384,7 @@
                                 Email :
                                 <strong>{{$order->shipping ? $order->shipping['email'] : "empty"}}</strong><br>
                                  {{trans('messages.Phone')}}:
-                                <strong>{{$order->shipping ? $order->shipping['phone']  : "Empty"}}</strong>
+                                <strong>{{$order->shipping ? $order->shipping['phone']  : "Empty"}}</strong><br>
                                  {{trans('messages.Country')}}:
                                 <strong>{{$order->shipping ? $order->shipping['country'] : "Empty"}}</strong><br>
                                 {{trans('messages.City')}}:
