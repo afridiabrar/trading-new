@@ -75,14 +75,14 @@
                             <small class="nav-subtitle" title="">{{trans('messages.blog_management')}}</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
-                        <li class="navbar-vertical-aside-has-menu">
-                            <a class="js-navbar-vertical-aside-menu-link nav-link"
-                               href="{{route('admin.blog-category.view')}}">
-                                <i class="tio-category-outlined nav-icon"></i>
-                                <span
-                                class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{trans('messages.blog_categories')}}</span>
-                            </a>
-                        </li>
+{{--                        <li class="navbar-vertical-aside-has-menu">--}}
+{{--                            <a class="js-navbar-vertical-aside-menu-link nav-link"--}}
+{{--                               href="{{route('admin.blog-category.view')}}">--}}
+{{--                                <i class="tio-category-outlined nav-icon"></i>--}}
+{{--                                <span--}}
+{{--                                class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{trans('messages.blog_categories')}}</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                         <li class="navbar-vertical-aside-has-menu">
                             <a class="js-navbar-vertical-aside-menu-link nav-link"
                                href="{!! route('admin.blog.index') !!}">

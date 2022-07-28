@@ -20,7 +20,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::with('blogCategory')->where(['deleted_at' => null])->orderBy('id', 'DESC')->paginate(25);
+        $blogs = Blog::where(['deleted_at' => null])->orderBy('id', 'DESC')->paginate(25);
         return view('admin-views.blog.index', compact('blogs'));
     }
 
@@ -45,7 +45,7 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required|max:191',
-            'blog_category_id' => 'required',
+//            'blog_category_id' => 'required',
             'content' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:5000'
         ], [
@@ -56,7 +56,7 @@ class BlogController extends Controller
         ]);
 
         $blog = new Blog;
-        $blog->blog_category_id = $request->input('blog_category_id');
+//        $blog->blog_category_id = $request->input('blog_category_id');
         $blog->title = $request->input('title');
         $blog->slug = Str::slug($request->input('title'));
         $blog->image = ImageManager::upload('blog/', 'png', $request->file('image'));;
@@ -103,7 +103,7 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required|max:191',
-            'blog_category_id' => 'required',
+//            'blog_category_id' => 'required',
             'content' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg|max:5000'
         ], [
@@ -113,7 +113,7 @@ class BlogController extends Controller
         ]);
 
         $blog = Blog::find($id);
-        $blog->blog_category_id = $request->input('blog_category_id');
+//        $blog->blog_category_id = $request->input('blog_category_id');
         $blog->title = $request->input('title');
         $blog->slug = Str::slug($request->input('title'));
         if ($request->hasFile('image')) {

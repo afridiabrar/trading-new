@@ -147,21 +147,21 @@
                             <div class="lang_form">
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="input-label" for="">{{trans('messages.title')}}</label>
                                             <input type="text" name="title"class="form-control" value="{!! old('title', $blog->title) !!}" placeholder="Title" required>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="name">{{trans('messages.category')}}</label>
-                                            <select
-                                                class="js-example-basic-multiple js-states js-example-responsive form-control"
-                                                name="blog_category_id" required>
-                                                <option value=""></option>
-                                                @foreach($categories as $key => $category)
-                                                    <option value="{!! $category->id !!}" {!! (old('blog_category_id') == $category->id || $blog->blog_category_id == $category->id) ? 'selected' : '' !!}>{!! $category->name !!}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label for="name">{{trans('messages.category')}}</label>--}}
+{{--                                            <select--}}
+{{--                                                class="js-example-basic-multiple js-states js-example-responsive form-control"--}}
+{{--                                                name="blog_category_id" required>--}}
+{{--                                                <option value=""></option>--}}
+{{--                                                @foreach($categories as $key => $category)--}}
+{{--                                                    <option value="{!! $category->id !!}" {!! (old('blog_category_id') == $category->id || $blog->blog_category_id == $category->id) ? 'selected' : '' !!}>{!! $category->name !!}</option>--}}
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
+{{--                                        </div>--}}
                                     </div>
                                 </div>
                                 <div class="form-group pt-4">

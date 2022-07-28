@@ -95,7 +95,7 @@
                                 <tr>
                                     <th>{{trans('messages.SL#')}}</th>
                                     <th>{{trans('messages.blog_title')}}</th>
-                                    <th>{{trans('messages.blog_category')}}</th>
+{{--                                    <th>{{trans('messages.blog_category')}}</th>--}}
                                     <th>{{trans('messages.blog_image')}}</th>
                                     <th>{{trans('messages.blog_published')}}</th>
                                     <th style="width: 5px" class="text-center">{{trans('messages.Action')}}</th>
@@ -110,9 +110,9 @@
                                                 {{substr($blog->title,0,20)}}{{strlen($blog->title)>20?'...':''}}
                                             </a>
                                         </td>
-                                        <td>
-                                            {!! $blog->blogCategory->name !!}
-                                        </td>
+{{--                                        <td>--}}
+{{--                                            {!! $blog->blogCategory->name !!}--}}
+{{--                                        </td>--}}
                                         <td>
                                             <img width="64"
 {{--                                                 onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"--}}
