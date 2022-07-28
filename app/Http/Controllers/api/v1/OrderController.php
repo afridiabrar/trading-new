@@ -119,7 +119,7 @@ class OrderController extends Controller
                 "description" => "New Order"
             ]);
 
-            if(/*!empty($x)*/true){
+            if(!empty($x)){
                 $data = OrderManager::place_order(
                     $id,
                     $email,
@@ -127,7 +127,7 @@ class OrderController extends Controller
                     $request['cart'],
                     null,
                     ( $request['discount']? $request['discount'] : 0),
-                    /*$x['id']*/'tras_32sdffsdf'
+                    $x['id']
                 );
 
                 $order_details = Order::with(['details'])->where(['id' => $data])->first();
