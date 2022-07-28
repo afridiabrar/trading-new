@@ -33,7 +33,7 @@ class Product extends Model
 
     protected $guarded =[];
 
-    protected $appends = ['hot_deal','thumbnail_url'];
+    protected $appends = ['hot_deal','thumbnail_url', 'after_discount_price'];
 
     public function translations()
     {
@@ -135,5 +135,21 @@ class Product extends Model
     {
         return url('storage/product/thumbnail/'.$this->thumbnail);
         // return url('storage/app/public/product/thumbnail/'.$this->thumbnail);
+    }
+
+    public function getAfterDiscountPriceAttribute()
+    {
+        $discount = 0;
+        if ($this->discount_type == 'percent') {
+            $discount = ($this->unit_price * $this->discount) / 100;
+        } elseif ($this->discount_type == 'amount') {
+            $discount = $this->discount;
+        }
+
+        if ($discount) {
+            return number_format($this->unit_price - $discount, 2);
+        }
+
+        return $discount;
     }
 }
