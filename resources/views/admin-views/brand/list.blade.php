@@ -50,7 +50,7 @@
                                         <td>
                                             <img style="width: 60px;height: 60px"
                                                  onerror="this.src='{{asset('assets/front-end/img/image-place-holder.png')}}'"
-                                                 src="{{asset('storage/app/public/brand')}}/{{$b['image']}}">
+                                                 src="{{asset('storage/brand')}}/{{$b['image']}}">
                                         </td>
                                         <td>
                                             <a class="btn btn-primary btn-sm"

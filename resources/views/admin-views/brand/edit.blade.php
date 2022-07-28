@@ -48,7 +48,7 @@
                                 <center>
                                     @if(isset($b['image']) && !empty($b['image']))
                                     <img style="border-radius: 10px; max-height:200px;" id="viewer"
-                                        src="{{asset('storage/app/public/brand')}}/{{$b['image']}}" alt="banner image"/>
+                                        src="{{asset('storage//brand')}}/{{$b['image']}}" alt="banner image"/>
                                     @else
                                     <img style="border-radius: 10px; max-height:200px;" id="viewer"
                                          src="{{asset('public\assets\back-end\img\400x400\img2.jpg')}}" alt="banner image"/>
