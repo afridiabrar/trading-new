@@ -8,6 +8,7 @@ use App\Model\Order;
 use App\Model\OrderDetail;
 use App\Model\Product;
 use App\Model\SellerWallet;
+use App\Model\ShippingAddress;
 use App\Model\ShippingMethod;
 use App\User;
 use Illuminate\Support\Facades\DB;
@@ -30,6 +31,19 @@ class OrderManager
         $ref_id
     )
     {
+        $shippingAddressData = [
+            'customer_id' => $customer_id,
+            'email' => $customer_info['email'],
+            'contact_person_name' => $customer_info['firstname'].' '.$customer_info['lastname'],
+            'address_type' => 'home',
+            'phone' => $customer_info['phone'],
+            'address' => $customer_info['address'],
+            'city' => $customer_info['townCity'],
+            'country' => $customer_info['region']
+        ];
+
+        $shippingAddress = ShippingAddress::create($shippingAddressData);
+
         $or = [
                 'id' => 100000 + Order::all()->count() + 1,
                 'customer_id' => $customer_id,
@@ -42,7 +56,7 @@ class OrderManager
                 'discount_type' => $discount == 0 ? null : 'coupon_discount',
                 'order_amount' => CartManager::cart_grand_total($cart) - $discount,
 //                'order_amount' => floatval($totalAmount) - $discount,
-                'shipping_address' => $customer_info['address'],
+                'shipping_address' => $shippingAddress->id,
                 'tracking_status' => 'waiting_for_driver_assignment',
                 'created_at' => now(),
                 'updated_at' => now()

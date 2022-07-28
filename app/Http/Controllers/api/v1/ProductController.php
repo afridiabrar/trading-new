@@ -34,8 +34,8 @@ class ProductController extends Controller
             if(request()->has('price_end') AND request()->get('price_end')){
                 $productQuery->where('unit_price','<=',request()->price_end);
             }
-            if(request()->has('brand_id') AND request()->get('brand_id')){
-                $productQuery->where('brand_id',request()->get('brand_id'));
+            if(request()->has('brand_id') && request('brand_id') != ''){
+                $productQuery->where('brand_id',request('brand_id'));
             }
 
             if(request()->has('status') && request('status') == 'high_to_low'){
