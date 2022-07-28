@@ -34,7 +34,7 @@ class OrderManager
         $shippingAddressData = [
             'customer_id' => $customer_id,
             'email' => $customer_info['email'],
-            'contact_person_name' => $customer_info['firstname'].' '.$customer_info['lastname'],
+            'contact_person_name' => $customer_info['firstName'].' '.$customer_info['lastName'],
             'address_type' => 'home',
             'phone' => $customer_info['phone'],
             'address' => $customer_info['address'],
